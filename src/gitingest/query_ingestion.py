@@ -525,10 +525,7 @@ def _extract_files_content(
         files = []
 
     if node["type"] == "file" and node["content"] != "[Non-text file]":
-        if node["size"] > query.max_file_size:
-            content = None
-        else:
-            content = node["content"]
+        content = node["content"]
 
         relative_path = Path(node["path"]).relative_to(query.local_path)
 

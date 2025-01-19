@@ -1,0 +1,7 @@
+services:
+  gitingest:
+    build: .
+    ports:
+      - "8082:8001"
+    environment:
+      ALLOWED_HOSTS: "*"
